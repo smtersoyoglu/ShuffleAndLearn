@@ -8,15 +8,29 @@
         android:id="@+id/homeFragment"
         android:name="com.smtersoyoglu.shuffleandlearn.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.smtersoyoglu.shuffleandlearn.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="word"
+            app:argType="com.smtersoyoglu.shuffleandlearn.Word" />
+    </fragment>
+
+
     <fragment
         android:id="@+id/learnedWordsFragment"
         android:name="com.smtersoyoglu.shuffleandlearn.LearnedWordsFragment"
         android:label="fragment_learned_words"
-        tools:layout="@layout/fragment_learned_words" />
+        tools:layout="@layout/fragment_learned_words" >
+        <action
+            android:id="@+id/action_learnedWordsFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 </navigation>
