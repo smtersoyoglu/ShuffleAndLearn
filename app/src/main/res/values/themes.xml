@@ -5,6 +5,15 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <!-- Custom button style -->
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/teal_650</item> <!-- Button background color -->
+        <item name="cornerRadius">12dp</item> <!-- All corners 2dp -->
+        <item name="android:textColor">@color/white</item> <!-- Text color -->
+        <item name="android:padding">12dp</item> <!-- Padding for better spacing -->
+        <item name="android:strokeWidth">12</item> <!-- Stroke width for border -->
+        <item name="android:strokeColor">@color/black</item> <!-- Border color -->
+    </style>
 
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="Theme.MaterialComponents">

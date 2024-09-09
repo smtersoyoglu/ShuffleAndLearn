@@ -120,10 +120,13 @@
 
     <Button
         android:id="@+id/learnedButton"
+        style="@style/CustomButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button_background"
+        android:layout_marginTop="16dp"
+        android:minWidth="142dp"
+        android:minHeight="64dp"
+        android:padding="18dp"
         android:text="Learned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
