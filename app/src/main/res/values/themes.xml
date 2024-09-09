@@ -6,4 +6,17 @@
     </style>
 
     <style name="Theme.ShuffleAndLearn" parent="Base.Theme.ShuffleAndLearn" />
+
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="Theme.MaterialComponents">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">40dp</item>
+    </style>
 </resources>

@@ -5,4 +5,6 @@
 
     <string name="home"> Home </string>
     <string name="learned_words"> Learned Words </string>
+    <string name="home_title">Vocabulary Cards</string>
+    <string name="home_subtitle">Learn New Words</string>
 </resources>
