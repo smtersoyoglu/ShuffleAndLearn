@@ -9,7 +9,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.smtersoyoglu.shuffleandlearn.databinding.ActivityMainBinding
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -29,7 +28,23 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
 
-
+        // Handle bottom navigation item selections
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homeFragment -> {
+                    // Navigate to HomeFragment, clearing back stack
+                    navController.popBackStack(R.id.homeFragment, false)
+                    true
+                }
+                R.id.learnedWordsFragment -> {
+                    // Navigate to LearnedWordsFragment
+                    if (navController.currentDestination?.id != R.id.learnedWordsFragment) {
+                        navController.navigate(R.id.learnedWordsFragment)
+                    }
+                    true
+                }
+                else -> false
+            }
+        }
     }
-
 }
