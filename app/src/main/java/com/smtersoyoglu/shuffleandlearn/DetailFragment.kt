@@ -37,6 +37,12 @@ class DetailFragment : Fragment() {
         // İngilizce kelimenin altındaki cümleyi göstermek için
         binding.detailExampleSentenceText.text = word.sentence
 
+        // Geri ikonuna tıklanınca geri gitme işlemi
+        binding.backIcon.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+
         // Check if the word is learned
         val isLearned = viewModel.isWordLearned(word.id)
         binding.learnedButton.text = if (isLearned) "UnLearned" else "Learned"
@@ -47,9 +53,12 @@ class DetailFragment : Fragment() {
             } else {
                 viewModel.markWordAsLearned(word)
             }
+
             // Navigate back to previous fragment
-            findNavController().popBackStack()
+            //findNavController().popBackStack()
         }
+
+
     }
 
     override fun onDestroyView() {
