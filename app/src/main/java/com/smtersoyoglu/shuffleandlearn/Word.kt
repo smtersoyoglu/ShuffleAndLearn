@@ -8,5 +8,6 @@ data class Word(
     val translation: String,
     val english: String,
     val imageResId: Int,
-    var isLearned: Boolean = false
+    var isLearned: Boolean = false,
+    val sentence: String
 ) : Parcelable
