@@ -15,17 +15,14 @@ class DetailFragment : Fragment() {
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: WordViewModel
-    private val args: DetailFragmentArgs by navArgs() // Safeargs ile argümanları alıyoruz
-
-
+    private val args: DetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       _binding = FragmentDetailBinding.inflate(inflater,container,false)
+        _binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,30 +30,25 @@ class DetailFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(WordViewModel::class.java)
 
-
-        // Argümanları al
         val word = args.word
-
-        // Veriyi binding'e ata
         binding.detailTranslationText.text = word.translation
         binding.detailEnglishText.text = word.english
         binding.detailImageView.setImageResource(word.imageResId)
+        // İngilizce kelimenin altındaki cümleyi göstermek için
+        binding.detailExampleSentenceText.text = word.sentence
 
-        if (word.isLearned) {
-            binding.learnedButton.text = "UnLearned"
-        } else {
-            binding.learnedButton.text = "Learned"
-        }
+        // Check if the word is learned
+        val isLearned = viewModel.isWordLearned(word.id)
+        binding.learnedButton.text = if (isLearned) "UnLearned" else "Learned"
 
-        // Learn/Unlearn işlemi
         binding.learnedButton.setOnClickListener {
-            if (word.isLearned) {
+            if (isLearned) {
                 viewModel.markWordAsUnlearned(word)
-                binding.learnedButton.text = "Learned"
             } else {
                 viewModel.markWordAsLearned(word)
-                binding.learnedButton.text = "UnLearned"
             }
+            // Navigate back to previous fragment
+            findNavController().popBackStack()
         }
     }
 
