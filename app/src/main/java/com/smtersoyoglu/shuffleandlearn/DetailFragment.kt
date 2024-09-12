@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
@@ -33,7 +34,10 @@ class DetailFragment : Fragment() {
         val word = args.word
         binding.detailTranslationText.text = word.translation
         binding.detailEnglishText.text = word.english
-        binding.detailImageView.setImageResource(word.imageResId)
+        //binding.detailImageView.setImageResource(word.imageUrl)
+        // Glide ile imageUrl'den resmi yükleme
+        Glide.with(this).load(word.imageUrl).into(binding.detailImageView)
+
         // İngilizce kelimenin altındaki cümleyi göstermek için
         binding.detailExampleSentenceText.text = word.sentence
 
