@@ -3,6 +3,7 @@ package com.smtersoyoglu.shuffleandlearn
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.smtersoyoglu.shuffleandlearn.databinding.LearnedWordsItemBinding
 
 class LearnedWordsListAdapter(private var learnedWordList: ArrayList<Word>,
@@ -14,7 +15,8 @@ class LearnedWordsListAdapter(private var learnedWordList: ArrayList<Word>,
             with(binding) {
                 itemLearnedTranslation.text = word.translation
                 itemLearnedEnglish.text = word.english
-                itemLearnedImage.setImageResource(word.imageResId)
+                //itemLearnedImage.setImageResource
+                Glide.with(itemView.context).load(word.imageUrl).into(itemLearnedImage)
 
                 root.setOnClickListener {
                     onWordClick(word)
