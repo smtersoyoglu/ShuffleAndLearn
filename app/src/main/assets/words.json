@@ -1,0 +1,372 @@
+[
+  {
+    "id": 1,
+    "translation": "Ördek",
+    "english": "Duck",
+    "image_url": "https://purepng.com/public/uploads/large/915080731572puo0gez0bpsu03fuyfmvufqowj5cqk7wx9toaclppuhegtfraecs5ge0gmqyqfmn8eltnjvipguvv9x1zpghes9bwgagwturifa.png",
+    "sentence": "The duck is swimming in the pond."
+  },
+  {
+    "id": 2,
+    "translation": "Köpek",
+    "english": "Dog",
+    "image_url": "https://cdn.pixabay.com/photo/2020/02/19/12/25/pug-4862083_1280.png",
+    "sentence": "The dog is playing with a ball in the garden."
+  },
+  {
+    "id": 3,
+    "translation": "Kedi",
+    "english": "Cat",
+    "image_url": "https://cdn.pixabay.com/photo/2024/04/01/10/31/ai-generated-8668580_1280.png",
+    "sentence": "The cat is sleeping on the windowsill."
+  },
+  {
+    "id": 4,
+    "translation": "Elma",
+    "english": "Apple",
+    "image_url": "https://cdn.pixabay.com/photo/2015/06/11/13/40/apple-805819_1280.png",
+    "sentence": "She is eating a red apple."
+  },
+  {
+    "id": 5,
+    "translation": "Ağaç",
+    "english": "Tree",
+    "image_url": "https://cdn.pixabay.com/photo/2014/12/22/00/07/tree-576847_1280.png",
+    "sentence": "The tree is full of green leaves."
+  },
+  {
+    "id": 6,
+    "translation": "Şişe",
+    "english": "Bottle",
+    "image_url": "https://cdn.pixabay.com/photo/2016/10/13/11/03/bottle-1737388_1280.png",
+    "sentence": "He is drinking water from a bottle."
+  },
+  {
+    "id": 7,
+    "translation": "Saat",
+    "english": "Watch",
+    "image_url": "https://purepng.com/public/uploads/large/wrist-watch-ogx.png",
+    "sentence": "She looked at her watch to check the time."
+  },
+  {
+    "id": 8,
+    "translation": "Sandalye",
+    "english": "Chair",
+    "image_url": "https://cdn.pixabay.com/photo/2019/06/18/06/01/chair-4281511_1280.png",
+    "sentence": "He sat down on the wooden chair."
+  },
+  {
+    "id": 9,
+    "translation": "Diş Fırçası",
+    "english": "Toothbrush",
+    "image_url": "https://purepng.com/public/uploads/large/91506344472zwlqvfdstvdicomjeipj3mpz3qpbqdeqruhj9kcq3y9qdl2nxn7vcaenlkgq9epy0zofkirir2vix2nyfvgudxqrwn7eloe2niyc.png"
+  },
+  {
+    "id": 10,
+    "translation": "Kalem",
+    "english": "Pen",
+    "image_url": "https://cdn.pixabay.com/photo/2012/04/13/17/57/pen-33077_1280.png",
+    "sentence": "He wrote a letter with a blue pen."
+  },
+  {
+    "id": 11,
+    "translation": "Kitap",
+    "english": "Book",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-open-bookobjectsopen-bookbook-school-open-education-object-library-study-631522325157tuyjg.png",
+    "sentence": "She is reading a fascinating book."
+  },
+  {
+    "id": 12,
+    "translation": "Çanta",
+    "english": "Bag",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-the-north-face-hero-bagbagbackpacksthe-north-facehero-baglaptop-pocket-1421526272830qkxwn.png",
+    "sentence": "She put all her books in the bag."
+  },
+  {
+    "id": 13,
+    "translation": "Balık",
+    "english": "Fish",
+    "image_url": "https://cdn.pixabay.com/photo/2016/04/15/20/08/fish-1331816_1280.png",
+    "sentence": "The fish is swimming in the aquarium."
+  },
+  {
+    "id": 14,
+    "translation": "Çiçek",
+    "english": "Flower",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-cosmea-flowerflowers-961524681214jjbrh.png",
+    "sentence": "The flower is blooming in the garden."
+  },
+  {
+    "id": 15,
+    "translation": "Köprü",
+    "english": "Bridge",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-long-bridgebridgedeck-bridgea-structure-carrying-a-roadpathcanal-across-a-riverfoot-bridge-1701528459149mpoly.png",
+    "sentence": "The bridge connects the two cities."
+  },
+  {
+    "id": 16,
+    "translation": "Gitar",
+    "english": "Guitar",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/12/20/guitar-159661_1280.png",
+    "sentence": "He is playing a song on his guitar."
+  },
+  {
+    "id": 17,
+    "translation": "Masa",
+    "english": "Table",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-tabletabledeskboardcook-tablefurniture-17015279987558xxzq.png",
+    "sentence": "They are eating dinner at the table."
+  },
+  {
+    "id": 18,
+    "translation": "Bilgisayar",
+    "english": "Computer",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/11/47/computer-158675_1280.png",
+    "sentence": "She is working on her computer."
+  },
+  {
+    "id": 19,
+    "translation": "Televizyon",
+    "english": "Television",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-lcd-televisiontvtelecommunicationmonochrometelevisionoldlcd-televisionled-1421526536303uy7b3.png",
+    "sentence": "They watched a movie on the television."
+  },
+  {
+    "id": 20,
+    "translation": "Telefon",
+    "english": "Phone",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/12/18/39/smartphone-153650_1280.png",
+    "sentence": "He is talking on the phone."
+  },
+  {
+    "id": 21,
+    "translation": "Yengeç",
+    "english": "Crab",
+    "image_url": "https://cdn.pixabay.com/photo/2014/12/21/23/58/lobster-576487_1280.png",
+    "sentence": "The crab is walking sideways on the beach."
+  },
+  {
+    "id": 22,
+    "translation": "Gözlük",
+    "english": "Glasses",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-sun-glassesglasseseyeglassesspectaclesplastic-lensesmountedsun-glasses-1421526498939485vs.png",
+    "sentence": "He wears glasses to see better."
+  },
+  {
+    "id": 23,
+    "translation": "Araba",
+    "english": "Car",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/01/07/ford-mustang-155132_1280.png",
+    "sentence": "The car is parked in the garage."
+  },
+  {
+    "id": 24,
+    "translation": "Yatak",
+    "english": "Bed",
+    "image_url": "https://purepng.com/public/uploads/large/21502323207hanoemwa2a3hmrw7dborjplmqpeds0igfkcbauskgkk7zkiofrrvc2aps1o9fymiw4wpveavenxwjg4hi8lxhofevosiutcfifhu.png",
+    "sentence": "He is lying on the bed."
+  },
+  {
+    "id": 25,
+    "translation": "Bardak",
+    "english": "Glass",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/13/39/wine-161287_1280.png",
+    "sentence": "She poured water into the glass."
+  },
+  {
+    "id": 26,
+    "translation": "Mutlu",
+    "english": "Happy",
+    "image_url": "https://cdn.pixabay.com/photo/2024/04/03/06/50/created-by-ai-8672239_1280.png",
+    "sentence": "He's smiling because that child is so happy."
+  },
+  {
+    "id": 27,
+    "translation": "Üzgün",
+    "english": "Sad",
+    "image_url": "https://cdn.pixabay.com/photo/2021/04/24/15/54/boy-6204400_1280.png",
+    "sentence": "He felt sad after the movie."
+  },
+  {
+    "id": 28,
+    "translation": "Uçak",
+    "english": "Airplane",
+    "image_url": "https://cdn.pixabay.com/photo/2023/07/16/20/47/ai-generated-8131428_1280.png",
+    "sentence": "The airplane is flying in the sky."
+  },
+  {
+    "id": 29,
+    "translation": "Şemsiye",
+    "english": "Umbrella",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/12/03/rain-159075_1280.png",
+    "sentence": "She opened her umbrella in the rain."
+  },
+  {
+    "id": 30,
+    "translation": "Çekiç",
+    "english": "Hammer",
+    "image_url": "https://cdn.pixabay.com/photo/2020/01/17/02/36/hammer-4772131_1280.png",
+    "sentence": "He used a hammer to fix the table."
+  },
+  {
+    "id": 31,
+    "translation": "Buzdolabı",
+    "english": "Refrigerator",
+    "image_url": "https://cdn.pixabay.com/photo/2017/10/07/16/39/fridge-2827034_1280.png",
+    "sentence": "The milk is stored in the refrigerator."
+  },
+  {
+    "id": 32,
+    "translation": "Yastık",
+    "english": "Pillow",
+    "image_url": "https://purepng.com/public/uploads/large/purepng.com-pillowpillowcodcushionholdingrectangular-cloth-bafeathersfoam-rubber-1701527946502fe0sy.png",
+    "sentence": "She rested her head on the pillow."
+  },
+  {
+    "id": 33,
+    "translation": "Tencere",
+    "english": "Pot",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/12/15/cooking-pot-159470_1280.png",
+    "sentence": "The soup is boiling in the pot."
+  },
+  {
+    "id": 34,
+    "translation": "Kaşık",
+    "english": "Spoon",
+    "image_url": "https://cdn.pixabay.com/photo/2015/06/02/11/00/spoon-794898_1280.png",
+    "sentence": "She stirred her tea with a spoon."
+  },
+  {
+    "id": 35,
+    "translation": "Makas",
+    "english": "Scissors",
+    "image_url": "https://cdn.pixabay.com/photo/2014/03/25/16/59/scissors-297776_1280.png",
+    "sentence": "He cut the paper with scissors."
+  },
+  {
+    "id": 36,
+    "translation": "Kalemtraş",
+    "english": "Pencil Sharpener",
+    "image_url": "https://cdn.pixabay.com/photo/2019/12/18/20/43/sharpener-4704862_1280.png",
+    "sentence": "He sharpened his pencil with a pencil sharpener."
+  },
+  {
+    "id": 37,
+    "translation": "Terlik",
+    "english": "Slipper",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/01/21/bathing-shoe-155582_1280.png",
+    "sentence": "She is wearing soft slippers."
+  },
+  {
+    "id": 38,
+    "translation": "Şapka",
+    "english": "Hat",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/11/49/hat-158760_960_720.png",
+    "sentence": "He wore a hat to protect himself from the sun."
+  },
+  {
+    "id": 39,
+    "translation": "Öğretmen",
+    "english": "Teacher",
+    "image_url": "https://cdn.pixabay.com/photo/2015/02/26/23/52/teacher-651318_1280.png",
+    "sentence": "The teacher is explaining the lesson to the students."
+  },
+  {
+    "id": 40,
+    "translation": "Okul",
+    "english": "School",
+    "image_url": "https://cdn.pixabay.com/photo/2012/05/07/15/35/building-48624_1280.png",
+    "sentence": "The children are going to school in the morning."
+  },
+  {
+    "id": 41,
+    "translation": "Elbise",
+    "english": "Dress",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/12/15/40/gown-150290_1280.png",
+    "sentence": "She wore a beautiful dress."
+  },
+  {
+    "id": 42,
+    "translation": "Top",
+    "english": "Ball",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/13/34/football-161132_1280.png",
+    "sentence": "The ball rolled down the hill."
+  },
+  {
+    "id": 43,
+    "translation": "Karpuz",
+    "english": "Watermelon",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/12/19/18/watermelon-154510_1280.png",
+    "sentence": "They enjoyed a slice of watermelon."
+  },
+  {
+    "id": 44,
+    "translation": "Ayna",
+    "english": "Mirror",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/13/35/frame-161150_1280.png",
+    "sentence": "He looked at himself in the mirror."
+  },
+  {
+    "id": 45,
+    "translation": "Portakal",
+    "english": "Orange",
+    "image_url": "https://cdn.pixabay.com/photo/2012/04/26/12/52/orange-42395_1280.png",
+    "sentence": "She drank a glass of fresh orange juice."
+  },
+  {
+    "id": 46,
+    "translation": "Tavşan",
+    "english": "Rabbit",
+    "image_url": "https://purepng.com/public/uploads/large/91508358587hvqqeafgr566eiflijgbvrcn9s0tgcedmjwsx3kmhd41u4miwvvsohh23gyfkgbfhwgvlzvmhpps0swhz3ez8azoewqhx6l7fm1q.png",
+    "sentence": "The rabbit is hopping around the garden."
+  },
+  {
+    "id": 47,
+    "translation": "Aslan",
+    "english": "Lion",
+    "image_url": "https://cdn.pixabay.com/photo/2024/04/04/13/07/ai-generated-8675098_1280.png",
+    "sentence": "The lion is known as the king of the jungle."
+  },
+  {
+    "id": 48,
+    "translation": "Kuş",
+    "english": "Bird",
+    "image_url": "https://cdn.pixabay.com/photo/2016/04/01/09/14/bird-1299232_1280.png",
+    "sentence": "The bird is singing in the tree."
+  },
+  {
+    "id": 49,
+    "translation": "Bisiklet",
+    "english": "Bicycle",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/10/22/mountain-bike-157085_1280.png",
+    "sentence": "He rides his bicycle around the park."
+  },
+  {
+    "id": 50,
+    "translation": "Güneş",
+    "english": "Sun",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/12/12/sun-159392_960_720.png",
+    "sentence": "The sun is shining in the sky."
+  },
+  {
+    "id": 51,
+    "translation": "Ayakkabı",
+    "english": "Shoes",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_1280.png",
+    "sentence": "She put on her new shoes before going outside."
+  },
+  {
+    "id": 52,
+    "translation": "Tren",
+    "english": "Train",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/13/25/train-161015_1280.png",
+    "sentence": "The train is arriving at the station."
+  },
+  {
+    "id": 53,
+    "translation": "Yağmur",
+    "english": "Rain",
+    "image_url": "https://cdn.pixabay.com/photo/2013/07/13/12/12/cloud-159389_1280.png",
+    "sentence": "The rain is falling gently on the window."
+  }
+]
