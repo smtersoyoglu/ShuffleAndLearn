@@ -59,12 +59,24 @@ class HomeFragment : Fragment() {
             wordListAdapter.updateWordList(wordList)
         }
 
-
+        /*
         // Refresh the list when returning from DetailFragment
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.fetchWords()
         }
+        */
 
+        // Yenileme işlemini başlat
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.fetchWordsFromJson()
+        }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Ekrana geri dönüldüğünde listeyi güncelle
+        viewModel.fetchWordsFromJson()
     }
 
 
