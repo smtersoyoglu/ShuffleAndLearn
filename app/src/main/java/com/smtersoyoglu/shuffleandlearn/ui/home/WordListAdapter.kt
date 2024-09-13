@@ -1,9 +1,11 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.smtersoyoglu.shuffleandlearn.R
+import com.smtersoyoglu.shuffleandlearn.data.model.Word
 import com.smtersoyoglu.shuffleandlearn.databinding.WordItemBinding
 
 class WordListAdapter(private var wordList: ArrayList<Word>,
@@ -33,12 +35,12 @@ class WordListAdapter(private var wordList: ArrayList<Word>,
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): WordListAdapter.WordListViewHolder {
+    ): WordListViewHolder {
         val binding = WordItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return WordListViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: WordListAdapter.WordListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: WordListViewHolder, position: Int) {
         holder.bind(wordList[position])
     }
 

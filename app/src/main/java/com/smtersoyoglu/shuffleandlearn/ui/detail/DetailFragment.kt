@@ -1,4 +1,4 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.ui.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.smtersoyoglu.shuffleandlearn.viewmodel.WordViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {

@@ -6,7 +6,7 @@
     app:startDestination="@id/splashScreenFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.smtersoyoglu.shuffleandlearn.HomeFragment"
+        android:name="com.smtersoyoglu.shuffleandlearn.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -15,18 +15,18 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.smtersoyoglu.shuffleandlearn.DetailFragment"
+        android:name="com.smtersoyoglu.shuffleandlearn.ui.detail.DetailFragment"
         android:label="Detail"
         tools:layout="@layout/fragment_detail" >
         <argument
             android:name="word"
-            app:argType="com.smtersoyoglu.shuffleandlearn.Word" />
+            app:argType="com.smtersoyoglu.shuffleandlearn.data.model.Word" />
     </fragment>
 
 
     <fragment
         android:id="@+id/learnedWordsFragment"
-        android:name="com.smtersoyoglu.shuffleandlearn.LearnedWordsFragment"
+        android:name="com.smtersoyoglu.shuffleandlearn.ui.learnedwords.LearnedWordsFragment"
         android:label="fragment_learned_words"
         tools:layout="@layout/fragment_learned_words" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.smtersoyoglu.shuffleandlearn.SplashScreenFragment"
+        android:name="com.smtersoyoglu.shuffleandlearn.ui.splashscreen.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/wordGameFragment"
-        android:name="com.smtersoyoglu.shuffleandlearn.WordGameFragment"
+        android:name="com.smtersoyoglu.shuffleandlearn.ui.wordgame.WordGameFragment"
         android:label="fragment_word_game"
         tools:layout="@layout/fragment_word_game" >
         <action

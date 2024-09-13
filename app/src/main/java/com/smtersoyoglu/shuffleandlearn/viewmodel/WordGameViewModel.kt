@@ -1,10 +1,13 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.smtersoyoglu.shuffleandlearn.data.datasource.WordDataSource
+import com.smtersoyoglu.shuffleandlearn.data.model.Word
+import com.smtersoyoglu.shuffleandlearn.data.repository.WordRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

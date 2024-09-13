@@ -1,4 +1,7 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.data.repository
+
+import com.smtersoyoglu.shuffleandlearn.data.datasource.WordDataSource
+import com.smtersoyoglu.shuffleandlearn.data.model.Word
 
 class WordRepository(private val dataSource: WordDataSource) {
 

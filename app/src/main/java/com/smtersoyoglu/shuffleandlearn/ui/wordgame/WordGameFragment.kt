@@ -1,4 +1,4 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.ui.wordgame
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.smtersoyoglu.shuffleandlearn.R
+import com.smtersoyoglu.shuffleandlearn.viewmodel.WordGameViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentWordGameBinding
 
 class WordGameFragment : Fragment() {

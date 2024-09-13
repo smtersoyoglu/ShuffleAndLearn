@@ -1,4 +1,4 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.ui.activity
 
 import android.os.Bundle
 import android.view.View
@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.smtersoyoglu.shuffleandlearn.R
 import com.smtersoyoglu.shuffleandlearn.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

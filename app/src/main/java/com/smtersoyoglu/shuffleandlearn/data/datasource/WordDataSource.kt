@@ -1,6 +1,7 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.data.datasource
 
 import android.content.Context
+import com.smtersoyoglu.shuffleandlearn.data.model.Word
 import org.json.JSONArray
 
 class WordDataSource(private val context: Context) {

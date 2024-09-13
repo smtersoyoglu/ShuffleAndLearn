@@ -1,4 +1,4 @@
-package com.smtersoyoglu.shuffleandlearn
+package com.smtersoyoglu.shuffleandlearn.data.model
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
