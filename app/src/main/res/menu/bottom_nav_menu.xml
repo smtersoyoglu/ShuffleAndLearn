@@ -11,4 +11,9 @@
         android:title="@string/learned_words"
         android:icon="@drawable/ic_learned_words" />
 
+    <item
+        android:id="@+id/wordGameFragment"
+        android:title="Word Game"
+        android:icon="@drawable/ic_wordgame" />
+
 </menu>

@@ -13,6 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="@string/home_title"
+        android:fontFamily="@font/fredoka_bold"
         android:textFontWeight="900"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +28,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="6dp"
+        android:fontFamily="@font/fredoka_semibold"
         android:text="@string/home_subtitle"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/swipeRefreshLayout"
@@ -45,6 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
