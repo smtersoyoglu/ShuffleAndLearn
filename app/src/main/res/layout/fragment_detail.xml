@@ -40,6 +40,7 @@
                 android:layout_marginLeft="13dp"
                 android:text="Learn This"
                 android:textColor="?attr/furniColor"
+                android:fontFamily="@font/fredoka_bold"
                 android:textFontWeight="900"
                 android:textSize="25sp" />
 
@@ -52,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:text="Word"
                 android:textColor="@color/white"
+                android:fontFamily="@font/fredoka_bold"
                 android:textFontWeight="900"
                 android:textSize="25sp" />
 
@@ -99,27 +101,50 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/ic_turkey"
+        app:layout_constraintBottom_toBottomOf="@+id/detailTranslationText"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/detailTranslationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text=""
-        android:textSize="32dp"
+        android:text="Köpek"
+        android:fontFamily="@font/fredoka_regular"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <ImageView
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_united_kingdom"
+        app:layout_constraintBottom_toBottomOf="@+id/detailEnglishText"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/detailEnglishText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text=""
+        android:fontFamily="@font/fredoka_semibold"
+        android:text="Dog"
         android:textColor="#dbbf41"
-        android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/detailTranslationText"
+        app:layout_constraintStart_toStartOf="@+id/detailTranslationText"
         app:layout_constraintTop_toBottomOf="@+id/detailTranslationText" />
 
     <TextView
@@ -127,8 +152,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text=""
-        android:textSize="20dp"
+        android:text="The dog is playing with a ball in the garden."
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:fontFamily="@font/fredoka_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailEnglishText" />
@@ -138,10 +167,11 @@
         style="@style/CustomButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:minWidth="142dp"
         android:minHeight="64dp"
         android:padding="18dp"
+        android:fontFamily="@font/fredoka_semibold"
         android:text="Learned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
