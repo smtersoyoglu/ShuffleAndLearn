@@ -1,6 +1,7 @@
 package com.smtersoyoglu.shuffleandlearn
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -9,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.smtersoyoglu.shuffleandlearn.databinding.ActivityMainBinding
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -28,6 +30,14 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
 
+        // Handle BottomNavigationView visibility
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.splashScreenFragment -> binding.bottomNavigationView.visibility = View.GONE
+                else -> binding.bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
+
         // Handle bottom navigation item selections
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -40,6 +50,13 @@ class MainActivity : AppCompatActivity() {
                     // Navigate to LearnedWordsFragment
                     if (navController.currentDestination?.id != R.id.learnedWordsFragment) {
                         navController.navigate(R.id.learnedWordsFragment)
+                    }
+                    true
+                }
+                R.id.wordGameFragment -> {
+                    // Navigate to WordGameFragment
+                    if (navController.currentDestination?.id != R.id.wordGameFragment) {
+                        navController.navigate(R.id.wordGameFragment)
                     }
                     true
                 }

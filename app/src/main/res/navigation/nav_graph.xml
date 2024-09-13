@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashScreenFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.smtersoyoglu.shuffleandlearn.HomeFragment"
@@ -32,5 +32,23 @@
         <action
             android:id="@+id/action_learnedWordsFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.smtersoyoglu.shuffleandlearn.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordGameFragment"
+        android:name="com.smtersoyoglu.shuffleandlearn.WordGameFragment"
+        android:label="fragment_word_game"
+        tools:layout="@layout/fragment_word_game" >
+        <action
+            android:id="@+id/action_wordGameFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
