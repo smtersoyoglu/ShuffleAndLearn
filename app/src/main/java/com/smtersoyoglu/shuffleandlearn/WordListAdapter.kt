@@ -16,7 +16,11 @@ class WordListAdapter(private var wordList: ArrayList<Word>,
                 itemTranslation.text = word.translation
                 itemEnglish.text = word.english
                 //itemImage.setImageResource(word.imageResId)
-                Glide.with(itemView.context).load(word.imageUrl).into(itemImage)
+                Glide.with(itemView.context)
+                    .load(word.imageUrl)
+                    .placeholder(R.drawable.image_loading)
+                    .error(R.drawable.img_not_available)
+                    .into(itemImage)
 
 
                 root.setOnClickListener {
