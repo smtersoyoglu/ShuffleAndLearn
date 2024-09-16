@@ -117,10 +117,14 @@ class WordGameFragment : Fragment() {
         return String.format("%02d:%02d", minutes, secs)
     }
 
-    @SuppressLint("ResourceType")
-    fun shakeView(view: View) {
-        val shake = AnimationUtils.loadAnimation(requireContext(), R.drawable.shake)
+    private fun shakeView(view: View) {
+        val shake = AnimationUtils.loadAnimation(requireContext(), R.anim.shake)
         view.startAnimation(shake)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
 

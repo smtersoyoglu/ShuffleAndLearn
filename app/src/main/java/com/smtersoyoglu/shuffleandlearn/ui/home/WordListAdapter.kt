@@ -2,6 +2,7 @@ package com.smtersoyoglu.shuffleandlearn.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.smtersoyoglu.shuffleandlearn.R
@@ -20,7 +21,6 @@ class WordListAdapter(private var wordList: ArrayList<Word>,
                 //itemImage.setImageResource(word.imageResId)
                 Glide.with(itemView.context)
                     .load(word.imageUrl)
-                    .placeholder(R.drawable.image_loading)
                     .error(R.drawable.img_not_available)
                     .into(itemImage)
 
