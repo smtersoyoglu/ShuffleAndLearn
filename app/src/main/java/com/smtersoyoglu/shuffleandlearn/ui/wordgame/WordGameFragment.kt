@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.smtersoyoglu.shuffleandlearn.R
 import com.smtersoyoglu.shuffleandlearn.viewmodel.WordGameViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentWordGameBinding
+import java.util.Locale
 
 class WordGameFragment : Fragment() {
 
@@ -113,7 +114,7 @@ class WordGameFragment : Fragment() {
     private fun formatTime(seconds: Int): String {
         val minutes = seconds / 60
         val secs = seconds % 60
-        return String.format("%02d:%02d", minutes, secs)
+        return String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)
     }
 
     private fun shakeView(view: View) {
