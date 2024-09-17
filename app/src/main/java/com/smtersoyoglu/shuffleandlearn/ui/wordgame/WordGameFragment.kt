@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.smtersoyoglu.shuffleandlearn.R
@@ -19,7 +20,7 @@ class WordGameFragment : Fragment() {
     private var _binding: FragmentWordGameBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: WordGameViewModel
+    private val viewModel: WordGameViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,8 +32,6 @@ class WordGameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this).get(WordGameViewModel::class.java)
 
         // Timer'ı gözlemle
         viewModel.timer.observe(viewLifecycleOwner) { remainingTime ->

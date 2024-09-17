@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -22,7 +23,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var wordListAdapter: WordListAdapter
-    private lateinit var viewModel: WordViewModel
+    private val viewModel: WordViewModel by viewModels()
     private lateinit var sharedPreferences: SharedPreferences
 
 
@@ -38,7 +39,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         sharedPreferences = requireActivity().getSharedPreferences("learned_words", Context.MODE_PRIVATE)
-        viewModel = ViewModelProvider(this).get(WordViewModel::class.java)
 
         wordListAdapter = WordListAdapter(arrayListOf()) { word ->
             // Handle word click event

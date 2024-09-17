@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -17,7 +18,7 @@ class DetailFragment : Fragment() {
 
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: WordViewModel
+    private val viewModel: WordViewModel by viewModels()
     private val args: DetailFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -31,7 +32,6 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(WordViewModel::class.java)
 
         val word = args.word
         binding.detailTranslationText.text = word.translation
@@ -51,23 +51,21 @@ class DetailFragment : Fragment() {
 
         // Check if the word is learned
         val isLearned = viewModel.isWordLearned(word.id)
+        binding.learnedButton.text = if (isLearned) "UnLearned" else "Learned"
 
         binding.learnedButton.setOnClickListener {
+
             if (isLearned) {
                 viewModel.markWordAsUnlearned(word)
                 Toast.makeText(requireContext(), "Word removed from learned list", Toast.LENGTH_SHORT).show()
             } else {
                 viewModel.markWordAsLearned(word)
                 Toast.makeText(requireContext(), "Word learned", Toast.LENGTH_SHORT).show()
-
             }
-
-            binding.learnedButton.text = if (isLearned) "UnLearned" else "Learned"
 
             // Navigate back to previous fragment
             //findNavController().popBackStack()
         }
-
 
     }
 

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -19,7 +20,7 @@ class LearnedWordsFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var learnedWordsListAdapter: LearnedWordsListAdapter
-    private lateinit var viewModel: WordViewModel
+    private val viewModel: WordViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,8 +32,6 @@ class LearnedWordsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this).get(WordViewModel::class.java)
 
         learnedWordsListAdapter = LearnedWordsListAdapter(arrayListOf()) { word ->
             val action = LearnedWordsFragmentDirections.actionLearnedWordsFragmentToDetailFragment(word)
