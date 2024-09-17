@@ -58,6 +58,10 @@ class HomeFragment : Fragment() {
 
         viewModel.wordList.observe(viewLifecycleOwner) { wordList ->
             wordListAdapter.updateWordList(wordList)
+            // SwipeRefresh animasyonunu durdur
+            binding.swipeRefreshLayout.isRefreshing = false
+            // RecyclerView en üste kaydır
+            binding.wordRecyclerView.scrollToPosition(0)
         }
 
         /*
