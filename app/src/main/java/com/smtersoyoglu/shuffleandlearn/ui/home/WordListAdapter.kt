@@ -3,6 +3,7 @@ package com.smtersoyoglu.shuffleandlearn.ui.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.smtersoyoglu.shuffleandlearn.R
@@ -48,9 +49,14 @@ class WordListAdapter(private var wordList: ArrayList<Word>,
         return wordList.size
     }
 
-    fun updateWordList(newWordList: ArrayList<Word>) {
-        wordList = newWordList
-        notifyDataSetChanged()
+    fun updateWordList(newWordList: List<Word>) {
+        val diffCallback = WordDiffCallback(wordList, newWordList)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
+
+        wordList.clear()
+        wordList.addAll(newWordList)
+        diffResult.dispatchUpdatesTo(this)
     }
+
 }
 

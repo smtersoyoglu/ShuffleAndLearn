@@ -66,7 +66,7 @@ class WordGameViewModel(application: Application) : AndroidViewModel(application
     }
 
 
-    fun startTimer() {
+    private fun startTimer() {
         if (isTimerRunning) return // Eğer zaten çalışıyorsa tekrar başlatma
         isTimerRunning = true
         timerJob = viewModelScope.launch {
