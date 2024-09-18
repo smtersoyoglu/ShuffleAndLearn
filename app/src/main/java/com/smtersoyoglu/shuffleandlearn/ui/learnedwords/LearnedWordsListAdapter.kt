@@ -2,10 +2,12 @@ package com.smtersoyoglu.shuffleandlearn.ui.learnedwords
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.smtersoyoglu.shuffleandlearn.data.model.Word
 import com.smtersoyoglu.shuffleandlearn.databinding.LearnedWordsItemBinding
+import com.smtersoyoglu.shuffleandlearn.ui.home.WordDiffCallback
 
 class LearnedWordsListAdapter(private var learnedWordList: ArrayList<Word>,
                               private val onWordClick: (Word) -> Unit)
@@ -46,7 +48,12 @@ class LearnedWordsListAdapter(private var learnedWordList: ArrayList<Word>,
     }
 
     fun updateWordList(newWordList: ArrayList<Word>) {
-        learnedWordList = newWordList
-        notifyDataSetChanged()
+        val diffCallback = WordDiffCallback(learnedWordList, newWordList)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
+
+        learnedWordList.clear()
+        learnedWordList.addAll(newWordList)
+
+        diffResult.dispatchUpdatesTo(this) // Yalnızca gerekli öğeleri günceller
     }
 }
