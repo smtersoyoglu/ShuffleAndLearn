@@ -2,12 +2,14 @@ package com.smtersoyoglu.shuffleandlearn.ui.wordgame
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -78,6 +80,9 @@ class WordGameFragment : Fragment() {
             binding.lottieAnimationView.playAnimation()
             updateWord()
             binding.englishTranslation.text.clear()
+
+            // Klavyeyi gizle
+            hideKeyboard()
         }
     }
 
@@ -109,6 +114,12 @@ class WordGameFragment : Fragment() {
                 findNavController().navigate(R.id.action_wordGameFragment_to_homeFragment) // Ana ekrana dön
             }
             .show()
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager =
+            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
 
     private fun formatTime(seconds: Int): String {
