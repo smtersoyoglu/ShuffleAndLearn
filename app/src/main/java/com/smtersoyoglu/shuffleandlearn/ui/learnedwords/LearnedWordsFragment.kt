@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.smtersoyoglu.shuffleandlearn.data.model.Word
 import com.smtersoyoglu.shuffleandlearn.viewmodel.WordViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentLearnedWordsBinding
 import kotlinx.coroutines.launch
@@ -43,6 +44,7 @@ class LearnedWordsFragment : Fragment() {
 
         viewModel.learnedWordList.observe(viewLifecycleOwner) { learnedWords ->
             learnedWordsListAdapter.updateWordList(learnedWords)
+            updateUIBasedOnData(learnedWords)
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
@@ -50,6 +52,23 @@ class LearnedWordsFragment : Fragment() {
         }
 
     }
+
+    private fun updateUIBasedOnData(learnedWords: List<Word>) {
+        if (learnedWords.isEmpty()) {
+            binding.apply {
+                // Liste boş ise animasyonu göster, RecyclerView'u gizle
+                learnedWordsRecyclerView.visibility = View.GONE
+                emptyAnimView.visibility = View.VISIBLE
+            }
+        } else {
+            binding.apply {
+                // Liste dolu ise RecyclerView'u göster, animasyonu gizle
+                learnedWordsRecyclerView.visibility = View.VISIBLE
+                emptyAnimView.visibility = View.GONE
+            }
+        }
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
