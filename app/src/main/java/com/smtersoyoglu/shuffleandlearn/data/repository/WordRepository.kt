@@ -2,8 +2,9 @@ package com.smtersoyoglu.shuffleandlearn.data.repository
 
 import com.smtersoyoglu.shuffleandlearn.data.datasource.WordDataSource
 import com.smtersoyoglu.shuffleandlearn.data.model.Word
+import javax.inject.Inject
 
-class WordRepository(private val dataSource: WordDataSource) {
+class WordRepository @Inject constructor(private val dataSource: WordDataSource) {
 
     fun getWordList(): ArrayList<Word> {
         return dataSource.getWordListFromJson()

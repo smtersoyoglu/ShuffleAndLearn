@@ -1,28 +1,32 @@
 package com.smtersoyoglu.shuffleandlearn.viewmodel
+
 import android.app.Application
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.smtersoyoglu.shuffleandlearn.data.datasource.WordDataSource
 import com.smtersoyoglu.shuffleandlearn.data.model.Word
 import com.smtersoyoglu.shuffleandlearn.data.repository.WordRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.json.JSONObject
+import javax.inject.Inject
 
-class WordViewModel(application: Application) : AndroidViewModel(application) {
-
-    private val repository = WordRepository(WordDataSource(application))
+@HiltViewModel
+class WordViewModel @Inject constructor(
+    private val repository: WordRepository,
+    private val sharedPreferences: SharedPreferences
+) : ViewModel() {
 
     private val _wordList = MutableLiveData<ArrayList<Word>>()
     val wordList: LiveData<ArrayList<Word>> get() = _wordList
 
     private val _learnedWordList = MutableLiveData<ArrayList<Word>>()
     val learnedWordList: LiveData<ArrayList<Word>> get() = _learnedWordList
-
-    private val sharedPreferences = getApplication<Application>().getSharedPreferences("learned_words", Context.MODE_PRIVATE)
 
     init {
         fetchWordsFromJson()

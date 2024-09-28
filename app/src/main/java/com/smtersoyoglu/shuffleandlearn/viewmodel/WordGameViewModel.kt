@@ -4,16 +4,22 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.smtersoyoglu.shuffleandlearn.data.datasource.WordDataSource
 import com.smtersoyoglu.shuffleandlearn.data.model.Word
 import com.smtersoyoglu.shuffleandlearn.data.repository.WordRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class WordGameViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository = WordRepository(WordDataSource(application))
+@HiltViewModel
+class WordGameViewModel @Inject constructor(
+    private val repository: WordRepository
+    ) : ViewModel() {
+    //private val repository = WordRepository(WordDataSource(application))
     private val _wordList = MutableLiveData<List<Word>>()
     val wordList: LiveData<List<Word>> get() = _wordList
 
