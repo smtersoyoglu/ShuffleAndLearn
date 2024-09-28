@@ -16,8 +16,10 @@ import androidx.navigation.fragment.findNavController
 import com.smtersoyoglu.shuffleandlearn.R
 import com.smtersoyoglu.shuffleandlearn.viewmodel.WordGameViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentWordGameBinding
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.Locale
 
+@AndroidEntryPoint
 class WordGameFragment : Fragment() {
 
     private var _binding: FragmentWordGameBinding? = null

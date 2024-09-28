@@ -13,8 +13,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.smtersoyoglu.shuffleandlearn.data.model.Word
 import com.smtersoyoglu.shuffleandlearn.viewmodel.WordViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentLearnedWordsBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class LearnedWordsFragment : Fragment() {
 
     private  var _binding : FragmentLearnedWordsBinding? = null

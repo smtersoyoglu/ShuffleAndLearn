@@ -13,7 +13,9 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.smtersoyoglu.shuffleandlearn.viewmodel.WordViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetailFragment : Fragment() {
 
     private var _binding: FragmentDetailBinding? = null

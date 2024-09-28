@@ -14,9 +14,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.smtersoyoglu.shuffleandlearn.viewmodel.WordViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
@@ -24,7 +25,6 @@ class HomeFragment : Fragment() {
 
     private lateinit var wordListAdapter: WordListAdapter
     private val viewModel: WordViewModel by viewModels()
-    private lateinit var sharedPreferences: SharedPreferences
 
 
     override fun onCreateView(
@@ -37,8 +37,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        sharedPreferences = requireActivity().getSharedPreferences("learned_words", Context.MODE_PRIVATE)
 
         wordListAdapter = WordListAdapter(arrayListOf()) { word ->
             // Handle word click event
