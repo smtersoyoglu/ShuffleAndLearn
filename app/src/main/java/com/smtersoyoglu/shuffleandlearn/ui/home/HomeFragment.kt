@@ -12,6 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.smtersoyoglu.shuffleandlearn.PhotoDialogFragment
+import com.smtersoyoglu.shuffleandlearn.R
 import com.smtersoyoglu.shuffleandlearn.viewmodel.WordViewModel
 import com.smtersoyoglu.shuffleandlearn.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -72,6 +74,12 @@ class HomeFragment : Fragment() {
         // Yenileme işlemini başlat
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.fetchWordsFromJson()
+        }
+
+        binding.shapeableImageView.setOnClickListener {
+            // Fotoğrafı tam ekran dialog ile göster
+            val dialog = PhotoDialogFragment(R.drawable.user_foto)
+            dialog.show(parentFragmentManager, "photoDialog")
         }
 
     }
